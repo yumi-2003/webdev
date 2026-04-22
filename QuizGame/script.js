@@ -98,7 +98,6 @@ function showQuestion() {
   progressBar.style.width = `${progressPercent}%`;
   questionText.textContent = currentQuestion.question;
 
-  //explain this is in a second
   answersContainer.innerHTML = "";
   currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
