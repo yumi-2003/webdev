@@ -6,7 +6,7 @@ const transactionFormEl = document.getElementById("transaction-form");
 const descriptionEl = document.getElementById("description");
 const amountEl = document.getElementById("amount");
 
-let transactions = JSON.parse(localStorage.getItem("transaction")) || [];
+let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 transactionFormEl.addEventListener("submit", addTransaction);
 
 function addTransaction(e) {
@@ -27,7 +27,7 @@ function addTransaction(e) {
   updateTransactionList();
   updateSummary();
 
-  transactionFormEl.reset();
+  transactionFormEl.clear();
 }
 
 function updateTransactionList() {
